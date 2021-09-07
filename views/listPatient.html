@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Patient List
+      <hr>
+      <div class="container">
+    <div class="row d-flex justify-content-center">
+        <a href="/" class="btn btn-info" role="button">Home</a>
+        <a href="/addDoctor" class="btn btn-info" role="button">Add Doctor</a>
+        <a href="/addPatient" class="btn btn-info" role="button">Add Patient</a>
+        <a href="/listDoctor" class="btn btn-info" role="button">List Doctors</a>
+        <a href="/listPatient" class="btn btn-info" role="button">List Patients</a>
+        <a href="/deletePatient" class="btn btn-info" role="button">Delete Patients</a>
+        <a href="/updateDoctor" class="btn btn-info" role="button">Update Doctor</a>
+        
+    </div>
+</div>
+<hr>
+  </h2>         
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Visit Date</th>
+        <th>Description</th>
+        <th>Doctor ID</th>
+        <th>Doctor First Name</th>
+        <th>Doctor Last Name</th>
+
+      </tr>
+    </thead>
+    <tbody>
+     <% for(let i = 0; i < patient.length; i++) { %>
+                <tr>
+                    <td> <%= patient[i].name%> </td>
+                    <td> <%= patient[i].age %> </td>
+                    <td> <%= patient[i].vistDate %> </td>
+                    <td> <%= patient[i].description %> </td>
+                    <td> <%= patient[i].doctor._id %> </td>
+                    <td> <%= patient[i].doctor.name.firstName %> </td>
+                    <td> <%= patient[i].doctor.name.lastName %> </td>
+                    
+                    
+                </tr>
+            <% } %>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

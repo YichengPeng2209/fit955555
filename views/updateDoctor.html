@@ -1,0 +1,42 @@
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+    <body>
+    <h1>Update Doctor Info
+        <hr>
+      <div class="container">
+    <div class="row d-flex justify-content-center">
+        <a href="/" class="btn btn-info" role="button">Home</a>
+        <a href="/addDoctor" class="btn btn-info" role="button">Add Doctor</a>
+        <a href="/addPatient" class="btn btn-info" role="button">Add Patient</a>
+        <a href="/listDoctor" class="btn btn-info" role="button">List Doctors</a>
+        <a href="/listPatient" class="btn btn-info" role="button">List Patients</a>
+        <a href="/deletePatient" class="btn btn-info" role="button">Delete Patients</a>
+        <a href="/updateDoctor" class="btn btn-info" role="button">Update Doctor</a>
+        
+    </div>
+</div>
+<hr>
+    </h1>
+
+<form method="POST" action="/updateDotorByID" >
+  <div>
+    <label for="updateDoctorNum">Doctor ID :</label>
+    <input type="text" class="form-control" id="updateDoctorNum"  placeholder="Enter Doctor ID" name ="updateDoctorNum">
+    <hr>
+    <label for="newNum">New number of patients :</label>
+    <input type="number" class="form-control" id="newNum"  placeholder="New Number of Patients" name ="newNum">
+    <hr>
+  </div>
+  
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+</body>
+</html>
